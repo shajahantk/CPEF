@@ -1,0 +1,20 @@
+
+We carried out our studies in the ferroin-catalyzed BZ reaction in a petri-dish, as described in detail in Ref.~\cite{Amrutha}. Briefly, we start with the following initial reagents: [$H_2SO_4$] = 0.16 M, [$NaBrO_3$] = 40 mM, [Malonic acid] = 40 mM, and [Ferroin] = 0.5 mM. The reaction mixture is embedded in 1.4 $\%$ w/v of agar gel to avoid any hydrodynamic perturbations. The single reaction layer of thickness $3$ mm is taken in a glass petri dish of diameter $10$ cm. 
+A circular excitation wave is created at the center of the reaction medium by inserting a silver wire. By disrupting the motion of the circular wavefront, a pair of counter-rotating spirals are created. To generate a pinned spiral wave, a glass bead of diameter $1.2$ mm is carefully placed at the tip of one of the spirals. The pinning of the spiral tip to the obstacle is confirmed after 1-2 rotations. An anticlockwise circularly polarized electric field (CPEF) is applied using two pairs of copper electrodes as in FIG.1. Images of the reaction medium are recorded using a CCD camera at every $30 s$ interval for $1-2$ hours.% Even though the results contain only the unpinning of a spiral pinned to a spherical bead, a comparative study with a spiral pinned to a cylindrical rod is included in the appendix (see appendix).
+
+To model this experiments, we use a two-dimensional Oregonator model. The model equations are given by 
+
+\begin{equation}\label{E_uoregonator}
+\frac{\partial u}{\partial t}=\frac{1}{\epsilon}(u(1-u)-\frac{fv(u-q)}{u+q})
++D_{u}\nabla^2u+M_{u}(\vec{E} \cdot \nabla u)
+\end{equation}
+\begin{equation}\label{E_voregonator}
+\frac{\partial v}{\partial t}=u-v+D_{v}\nabla^2v+M_{v}(\vec{E} \cdot \nabla v).
+\end{equation}
+
+Here, $u$ is the activator variable, and $v$ is the inhibitor variable (corresponding to the rescaled concentrations of [HBrO2] and the catalyst, respectively). $\vec{E} = E_{0} sin(\frac{2\pi t}{T})\hat{x} + E_{0} cos(\frac{2\pi t}{T})\hat{y}$ is the circularly polarized electric field. The electric field is added as an advection term for the variables $u$ and $v$. An obstacle is added to this domain by keeping diffusion coefficients very low. 
+The simulations details are given in  Ref.~\cite{Amrutha}.
+%The model parameters are $q = 0.002$, $f = 1.4$ and $\epsilon=0.04$. The diffusion coefficients are $D_{u}=1.0$ and $D_{v}=0.6$. $M_{u}=1.0$ and $M_{v}=-2.0$ are the ionic mobilities of $u$ and $v$ respectively. The computation domain of size $300 \times 300$ is discretized into grids of uniform size $dx=dy=0.1$ (s.u) in space. The explicit forward Euler method with a time step, $dt=0.0001$, is used to study the time evolution. No-flux boundary conditions are imposed both on the domain and obstacle boundary. An obstacle of radius, $r = 10$ s.u, is created at the center of the domain by reducing the value of $D_{u}=0.0001$ inside the obstacle. Phase-field method is used to set no-flux boundary conditions at the obstacle boundary \cite{fenton2005modeling}. 
+%All the numerical results shown in this paper are carried out with the two-variable Oregonator model. But in the appendix, the results obtained from a three-variable Oregonator model are compared with those obtained from the two-variable model, and both show good agreement (see the Appendix).
+
+

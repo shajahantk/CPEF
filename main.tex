@@ -68,7 +68,7 @@ prb,
 \author{Anupama Sebastian}%
 
 \author{P P Sibeesh}
-
+\author{Shreyas P}
 \author{T K Shajahan}
 \affiliation{
  Dpeartment of Physics\\ National Institute of Technology Karnataka}
@@ -79,6 +79,7 @@ prb,
              %  but any date may be explicitly specified
 
 \begin{abstract}
+	NEED TO EDIT\\
 The mechanism of spiral wave unpinning in the BZ reaction with an applied rotating electric field is investigated by varying the pacing ratio, initial spiral phase, and field strength. Forced retardation of the pinned spiral wave by the electric field, while propagating away from the anode, induces unpinning. The unpinning occurs within the limits of the unpinning phase window calculated using the derived analytical formulae. The experimental observations are verified using the numerical simulations performed with the Oregonator model.
 \end{abstract}
 
@@ -90,45 +91,92 @@ The mechanism of spiral wave unpinning in the BZ reaction with an applied rotati
 %\tableofcontents
 
 %\section{Introduction}
+The Belousov-Zhabotinski(BZ) reaction has served as the prototype of a large
+class of systems that display excitation waves, including the waves of action
+potentials seen in the heart~\cite{Luther2011}, brain~\cite{Huang2004}, retina~\cite{???},
+and waves of communication in the social amoeba dictystelium~\cite{???}.  
+Chemical excitation waves in the BZ reaction exhibit spatio-temporal 
+patterns such as expanding target waves~\cite{zhang2019stability} or rotating spiral
+waves~\cite{zykov2018spiral}, whose appearance and dynamics are strikingly
+similar to such waves in other media~\cite{sinha2014patterns}.  Recently there
+has been a renewed interest in this pattern forming system because of the
+active nature of the chemical waves: their wavefronts are electrically
+charged~\cite{Amrutha,steinbock1992electric}, the droplets of chemical reaction in an oily medium
+can move by itself~\cite{jin2017chemotaxis, ryabchun2022run}.
 
-Chemical waves in the oscillating BZ reaction are being studied intensively because of their applicability in various interdisciplinary areas, including the chemical computing~\cite{gorecki2022information} and the self-propelled motion~\cite{jin2017chemotaxis, ryabchun2022run}. The BZ reaction models the excitable media~\cite{sinha2014patterns}. Thin layers of the BZ reaction exhibit spatio-temporal patterns such as expanding target waves~\cite{zhang2019stability} or rotating spiral waves~\cite{zykov2018spiral}. The tip of a rotating spiral wave can pin to inhomogeneities present in the medium. Pinning alters the wave parameters such as the wave period, wavelength, and velocity depending on the size of the pinning obstacle~\cite{lim2006spiral, sutthiopad2015propagation}. An applied electric field can achieve unpinning of pinned spirals from the inhomogeneities~\cite{jimenez2013electric,punacha2020theory}. 
-Application of external electric field to the excitable systems, especially to the chemical and biological systems, can have a sensitive control over the wave dynamics~\cite{steinbock1992electric,bittihn2012negative,feng2022removal}.
+A characteristic feature of excitation waves in all types of media is their
+tendency to pin to heterogeneities in the
+system~\cite{sutthiopad2015propagation, lim2006spiral,Zemlin2012, Shajahan:07}. This is especially
+pertinent in cardiac tissue since stable pinned rotating waves can be
+pathological and difficult to control~\cite{Gray2011, Bittihn2010}. Several
+groups have proposed methods for controlling such pinned waves using either
+pulsed electric field~\cite{Luther2011} or, more recently, circularly
+polarized electric field~\cite{Feng2014, pan2016removal,feng2022removal}. It is
+observed that chemical waves are also prone to pinning~\cite{???} and they can
+also be unpinned using electric field~\cite{Amrutha,???}. However, there is an
+essential distinction between the chemical wave and the waves in physiological
+tissue. In the latter, the electric does not affect the excitation wave
+directly, instead they unpin by inducing secondary excitations from the
+heterogeneities~\cite{pumir2007wave}. In the chemical medium, on the other hand,
+the wavefront
+contains charged ions such as $Br^-$ and $HBrO^+$, which can be moved by
+electric field~\cite{Amrutha,jimenez2013electric,???}. The electric field in a
+chemical medium exerts an advective force directly on the wavefront. Such an electric force on the wave is not reported in the physiological tissue. It is
+also observed that the electric force acting on the chemical wave is
+asymmetrical- it acts on the wave as it moves away from the anode.   
 
-Field-induced unpinning of spiral waves in excitable cardiac tissue occurs due to the secondary wave emission~\cite{pumir2007wave} from the pinning obstacle. However, an applied electric field does not induce wave emission in the BZ reaction. The variations in the chemical wave dynamics in an applied electric field are correlated with the oriented movement of ionic species in the medium.
-So the mechanism of spiral unpinning is quite different in the chemical excitable medium. A slowdown in the spiral velocity due to the electric force leads to unpinning of a pinned spiral tip in a DC electric field~\cite{dcmechanism}. In such cases, the field is static. But in a rotating electric field, the spiral and the field rotate with specific frequencies.
-Numerical studies in reaction-diffusion models show that a rotating CPEF can synchronize the spiral frequency~\cite{chen2009synchronization} and make a chiral selection~\cite{li2013chiral}.
-A co-rotating CPEF can induce a maximum spiral drift, but a counter-rotation locks the drift~\cite{chen2006drift}. Unpinning of two~\cite{punacha2020theory} and three-dimensional~\cite{pan2016removal} vortices is also reported in the cardiac models using the CPEF. The only experimental study of CPEF in the BZ reaction is reported by Ji et al. \cite{ji2013experimental}. 
-The control of spiral turbulence obtained in the BZ reaction with CPEF is explained based on frequency synchronization. 
+Recently it is proposed that circularly polarized electric fields(CPEF) are
+more efficient in controlling cardiac excitation
+waves~\cite{feng2022removal,punacha2020theory,Feng2014}. Since then, there has
+been much interest in controlling generic excitation waves using
+CPEF~\cite{pan2016removal}, and it was also implemented to control spiral waves
+in the B reaction~\cite{chen2009synchronization,ji2013experimental}. Numerical studies in reaction-diffusion models show that a rotating CPEF can synchronize the spiral frequency~\cite{chen2009synchronization} and make a chiral selection~\cite{li2013chiral}.
+A co-rotating CPEF can induce a maximum spiral drift, but a counter-rotation
+locks the drift~\cite{chen2006drift}. 
+So far, we have not seen any experimental reports of unpinning excitation
+waves, either in the chemical
+medium or the cardiac tissue.  While there is a good understanding of how CPEF
+affects pinned cardiac excitation waves~\cite{punacha2020theory} there have yet
+to be studies on the
+mechanism of CPEF on the chemical waves. The chemical wave is being controlled
+by a rotating force, which can only retard the wave. Here the electric field is
+chasing the chemical wave, but the field can only `catch' the wave from behind.
+Moreover, the CPEF can only move at fixed
+speed, and if it fails to halt the wave and overtakes it, it has to come back
+again to act on it. We are unaware of any other physical situation 
+similar to this.
+
+%Because of this direct interaction between the chemical wave and the electric field
+%Chemical waves in the oscillating BZ reaction are being studied intensively because of their applicability in various interdisciplinary areas, including the chemical computing~\cite{gorecki2022information} and the self-propelled motion~\cite{jin2017chemotaxis, ryabchun2022run}. The BZ reaction models the excitable media~\cite{sinha2014patterns}.The tip of a rotating spiral wave can pin to inhomogeneities present in the medium. Pinning alters the wave parameters such as the wave period, wavelength, and velocity depending on the size of the pinning obstacle~\cite{lim2006spiral, sutthiopad2015propagation}. An applied electric field can achieve unpinning of pinned spirals from the inhomogeneities~\cite{jimenez2013electric,punacha2020theory}. 
+%Application of external electric field to the excitable systems, especially to the chemical and biological systems, can have a sensitive control over the wave dynamics~\cite{steinbock1992electric,bittihn2012negative,feng2022removal}.
+
+%Field-induced unpinning of spiral waves in excitable cardiac tissue occurs due
+%to the secondary wave emission~\cite{pumir2007wave,Bittihn2010} from the
+%pinning obstacle. However, an applied electric field does not induce wave
+%emission in the BZ reaction. The variations in the chemical wave dynamics in an
+%applied electric field are correlated with the oriented movement of ionic
+%species in the medium.
+%So the mechanism of spiral unpinning is quite different in the chemical excitable medium. A slowdown in the spiral velocity due to the electric force leads to unpinning of a pinned spiral tip in a DC electric field~\cite{Amrutha}. In such cases, the field is static. But in a rotating electric field, the spiral and the field rotate with specific frequencies.
+%Numerical studies in reaction-diffusion models show that a rotating CPEF can synchronize the spiral frequency~\cite{chen2009synchronization} and make a chiral selection~\cite{li2013chiral}.
+%A co-rotating CPEF can induce a maximum spiral drift, but a counter-rotation locks the drift~\cite{chen2006drift}. Unpinning of two~\cite{punacha2020theory} and three-dimensional~\cite{pan2016removal} vortices is also reported in the cardiac models using the CPEF. The only experimental study of CPEF in the BZ reaction is reported by Ji et al. \cite{ji2013experimental}. 
+%The control of spiral turbulence obtained in the BZ reaction with CPEF is explained based on frequency synchronization. 
  
-In this paper, for the first time to our knowledge, the unpinning of a spiral wave with the circularly polarised electric field (CPEF) in the BZ reaction is reported. We will address the mechanism of spiral unpinning and formulate it analytically.
- 
-\section{Methods}
-
-Our experiments were carried out in a ferroin-catalyzed BZ reaction with the following initial reagent concentrations: [$H_2SO_4$] = 0.16 M, [$NaBrO_3$] = 40 mM, [Malonic acid] = 40 mM, and [Ferroin] = 0.5 mM. The reaction mixture is embedded in 1.4 $\%$ w/v of agar gel to avoid any hydrodynamic perturbations. The single reaction layer of thickness $3$ mm is taken in a glass petri dish of diameter $10$ cm. sudo apt-get install texlive-publishers
-A circular excitation wave is created at the center of the reaction medium by inserting a silver wire. By disrupting the motion of the circular wavefront, a pair of counter-rotating spirals are created. A glass bead of diameter $1.2$ mm is carefully placed at the tip of one of the spirals. The pinning of the spiral tip to the obstacle is confirmed after 1-2 rotations.
-An anticlockwise rotating circularly polarized electric field (CPEF) is applied using two pairs of copper electrodes as in FIG.1. 
-
-Images of the reaction medium are recorded using a CCD camera at every $30 s$ interval for $1-2$ hours. Even though the results contain only the unpinning of a spiral pinned to a spherical bead, a comparative study with a spiral pinned to a cylindrical rod is included in the appendix (see appendix).
-
-
-From a mathematical point of view, the dynamical features of the BZ reaction can be described using the Oregonator model. 
-
-\begin{equation}\label{E_uoregonator}
-\frac{\partial u}{\partial t}=\frac{1}{\epsilon}(u(1-u)-\frac{fv(u-q)}{u+q})
-+D_{u}\nabla^2u+M_{u}(\vec{E} \cdot \nabla u)
-\end{equation}
-\begin{equation}\label{E_voregonator}
-\frac{\partial v}{\partial t}=u-v+D_{v}\nabla^2v+M_{v}(\vec{E} \cdot \nabla v).
-\end{equation}
-
-Here, $u$ is the activator variable, and $v$ is the inhibitor variable (corresponding to the rescaled concentrations of [HBrO2] and the catalyst, respectively). $\vec{E} = E_{0} sin(\frac{2\pi t}{T})\hat{x} + E_{0} cos(\frac{2\pi t}{T})\hat{y}$ is the circularly polarized electric field. The electric field is added as an advection term for the variables $u$ and $v$. 
-
-The model parameters are $q = 0.002$, $f = 1.4$ and $\epsilon=0.04$. The diffusion coefficients are $D_{u}=1.0$ and $D_{v}=0.6$. $M_{u}=1.0$ and $M_{v}=-2.0$ are the ionic mobilities of $u$ and $v$ respectively. The computation domain of size $300 \times 300$ is discretized into grids of uniform size $dx=dy=0.1$ (s.u) in space. The explicit forward Euler method with a time step, $dt=0.0001$, is used to study the time evolution. No-flux boundary conditions are imposed both on the domain and obstacle boundary. An obstacle of radius, $r = 10$ s.u, is created at the center of the domain by reducing the value of $D_{u}=0.0001$ inside the obstacle. Phase-field method is used to set no-flux boundary conditions at the obstacle boundary \cite{fenton2005modeling}. 
-All the numerical results shown in this paper are carried out with the two-variable Oregonator model. But in the appendix, the results obtained from a three-variable Oregonator model are compared with those obtained from the two-variable model, and both show good agreement (see the Appendix).
-
+%for the first time to our knowledge, the unpinning of a spiral wave with the circularly polarised electric field (CPEF) in the BZ reaction is reported. We will address the mechanism of spiral unpinning and formulate it analytically.
+In this paper, we study the unpinning of chemical waves using CPEF in
+experiments as well as in a mathematical model of the BZ reaction. The
+mechanism of spiral wave unpinning in the BZ reaction with an applied rotating
+electric field is investigated by varying the pacing ratio, initial spiral
+phase, and field strength. Based on these results, we hypothesize that the wave
+unpins when the direction of the spiral is parallel to the electric field
+vector. Based on this hypothesis, we predict the unpinning angle as a function
+of the initial position of the spiral wave, the frequency, and the strength of
+the electric field. We find excellent agreement with experimental data and
+numerical results.  
+\input{methods} 
 \input{results}
 
 \section{Conclusions}
+	NEED TO EDIT\\
 
 The electric force induces retardation in the propagation of a pinned spiral, which eventually leads to the unpinning of the spiral if the field possesses a threshold amplitude. 
 The migration of negative bromide ions towards the anode causes a slowdown in the wave speed during the cycle of spiral rotation towards the cathode.
@@ -155,6 +203,7 @@ The presence of mobile ions in the BZ reaction causes the excitation waves in th
 \end{acknowledgments}
 
 \section{Author Contributions}
+	NEED TO EDIT\\
 S.V.A and T.K.S planned the objectives of the study. S.V.A performed the experiments. P.S built the experimental setup. S.P designed the numerical study as well as the computational framework. A.S performed numerical simulations. A.S and T.K.S formulated the equations. S.V.A and A.S collected and analysed the data with help from T.K.S. S.V.A and T.K.S wrote the paper. All authors helped to edit the paper. 
 
 
