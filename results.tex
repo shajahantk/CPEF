@@ -25,7 +25,7 @@ anchored to the obstacle in the domain. It is known that this wave can be
 unpinned with an electric field~\cite{Amrutha,???}. 
 Here we employ the circularly polarized electric field (CPEF) using two
 cross-electrodes, as described before. The CPEF can unpin the wave if the
-amplitude of the electric field is above a certain threshold value ($E_{the}$),
+amplitude of the electric field is above a certain threshold value ($E_{th}$),
 as shown in Fig.~\ref{fig:unpinning_images}~c.  An arrow indicates the direction of the electric
 field. Similar unpinning
 is also seen in the model equations(Fig.~\ref{fig:unpinning_images}~d). To
@@ -112,7 +112,14 @@ For overdrive pacing with $p>1$, the unpinning phase window is given by
 \label{eq:overdrive}
 \end{equation}
 with a width $\Delta\phi_u = \frac{\pi - 2 \sin^{-1}(\frac{E_{th}}{E})}{p-1}$.
-As the CPEF approaches the spiral wave from behind, this condition is satisfied for the lower bound of this range. However, when $\phi_0$ falls within this range, the wave unpins with a fixed delay, as observed with the DC electric field. To demonstrate these result, we plot ($\phi_u-\theta_E$) as a function of $\phi_0$ in Fig.~\ref{fig:unpinningE>Eth}. Note that $\phi_u$  shows little variation when $\phi_0$ is outside the range given by Eq.~\ref{eq:overdrive}.
+As the field vector begins to align parallel to the direction of spiral wave,
+the unpinning condition (Eq.~\ref{eq:overdrive}) is satisfied at the lower
+bound of this range. However, when $\phi_0$ falls within this range, the wave
+unpins with a fixed delay, as observed with the DC electric field. (??? Some times it misses unpinning and has to come back; How do we demonstrate this?).
+%To demonstrate these result, we plot ($\phi_u-\theta_E$) as a function of $\phi_0$
+%in Fig.~\ref{fig:unpinningE>Eth}. Note that $\phi_u$  shows little variation
+%when $\phi_0$ is outside the range given by Eq.~\ref{eq:overdrive}.
+
 
 For underdrive pacing i.e, for $p<1$, the unpinning phase window is 
 \begin{equation}
@@ -129,8 +136,8 @@ For p = 1, unpinning happens only if the following condition is satisfied.
 \label{eq:p=1}
 \end{equation} 
 Thus for $p=1$ the range of initial phases that lead to
-unpinning increase with $E_{th}$. Fig.\ref{fig:E_p1}a shows the initial spiral
-phases that lead to successful unpinning as a function of $\frac{E}{E_{th}}$.
+unpinning increase with the field strength, $E$. Fig.\ref{fig:E_p1}a shows the initial spiral
+phases that lead to successful unpinning as a function of $\frac{E_{th}}{E}$.
 
 
 %

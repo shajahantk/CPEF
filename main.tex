@@ -89,6 +89,26 @@ The mechanism of spiral wave unpinning in the BZ reaction with an applied rotati
 \maketitle
 
 %\tableofcontents
+\begin{figure*}[htb!]
+    \centering
+    \includegraphics{E>Eth.png}
+    \caption{Unpinning at $E>E_{th}$ 
+    (${\sin^{-1}}{(\frac{E_{th}}{E})}=48.95^0$): Spiral waves with different
+	${\phi}_0$ are unpinned in a CPEF with both under-drive ($p<1$) and
+	over-drive pacing ($p>1$). The solid bottom line represents the lower
+	limit of the range of possible ${\phi}_u$-values given by the relation
+	${\phi}_u=(p{\phi}_0+48.95)/(p-1)$ for over-drive pacing and
+	${\phi}_u=(\pi-p{\phi}_0+48.59)/(1-p)$ for under-drive pacing. The
+	upper limit of the range of possible ${\phi}_u$-values, given by the
+	relation ${\phi}_u=(p{\phi}_0+\pi-48.95)/(p-1)$ for over-drive pacing
+	and ${\phi}_u=(2\pi-p{\phi}_0-48.59)/(1-p)$ for under-drive pacing, are
+	represented by the top dashed line. For ${\phi}_0 = 315^0$, the above
+	equations must be added with $2\pi$ in order to get the positive phase
+	values.
+    Circles and triangles represent the experiment and simulation data
+	respectively.  }
+    \label{fig:unpinning_E>Eth}
+\end{figure*}
 
 %\section{Introduction}
 The Belousov-Zhabotinski(BZ) reaction has served as the prototype of a large
@@ -104,7 +124,7 @@ active nature of the chemical waves: their wavefronts are electrically
 charged~\cite{Amrutha,steinbock1992electric}, the droplets of chemical reaction in an oily medium
 can move by itself~\cite{jin2017chemotaxis, ryabchun2022run}.
 
-A characteristic feature of excitation waves in all types of media is their
+A characteristic feature of excitation waves is their
 tendency to pin to heterogeneities in the
 system~\cite{sutthiopad2015propagation, lim2006spiral,Zemlin2012, Shajahan:07}. This is especially
 pertinent in cardiac tissue since stable pinned rotating waves can be
@@ -115,7 +135,7 @@ polarized electric field~\cite{Feng2014, pan2016removal,feng2022removal}. It is
 observed that chemical waves are also prone to pinning~\cite{???} and they can
 also be unpinned using electric field~\cite{Amrutha,???}. However, there is an
 essential distinction between the chemical wave and the waves in physiological
-tissue. In the latter, the electric does not affect the excitation wave
+tissue. In the latter, the electric force does not affect the excitation wave
 directly, instead they unpin by inducing secondary excitations from the
 heterogeneities~\cite{pumir2007wave}. In the chemical medium, on the other hand,
 the wavefront
@@ -130,11 +150,11 @@ more efficient in controlling cardiac excitation
 waves~\cite{feng2022removal,punacha2020theory,Feng2014}. Since then, there has
 been much interest in controlling generic excitation waves using
 CPEF~\cite{pan2016removal}, and it was also implemented to control spiral waves
-in the B reaction~\cite{chen2009synchronization,ji2013experimental}. Numerical studies in reaction-diffusion models show that a rotating CPEF can synchronize the spiral frequency~\cite{chen2009synchronization} and make a chiral selection~\cite{li2013chiral}.
+in the BZ reaction~\cite{chen2009synchronization,ji2013experimental}. Numerical studies in reaction-diffusion models show that a rotating CPEF can synchronize the spiral frequency~\cite{chen2009synchronization} and make a chiral selection~\cite{li2013chiral}.
 A co-rotating CPEF can induce a maximum spiral drift, but a counter-rotation
 locks the drift~\cite{chen2006drift}. 
 So far, we have not seen any experimental reports of unpinning excitation
-waves, either in the chemical
+waves using CPEF, either in the chemical
 medium or the cardiac tissue.  While there is a good understanding of how CPEF
 affects pinned cardiac excitation waves~\cite{punacha2020theory} there have yet
 to be studies on the
